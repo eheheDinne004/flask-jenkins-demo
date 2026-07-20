@@ -35,9 +35,7 @@
 </p>
 
 ## Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
-Cập nhật hệ thống
-
-sudo apt update && sudo apt upgrade -y
+Cập nhật hệ thống **sudo apt update && sudo apt upgrade -y**
 
 <p align="center">
  <img width="940" height="169" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
@@ -45,9 +43,7 @@ sudo apt update && sudo apt upgrade -y
   <i>Hình 3: Cập nhật hệ thống</i>
 </p>
 
-Cài đặt OpenJDK 21
-
-sudo apt install openjdk-21-jre openjdk-21-jdk -y
+Cài đặt OpenJDK 21 **sudo apt install openjdk-21-jre openjdk-21-jdk -y**
 
 <p align="center">
  <img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/2ff3c94d-a2dd-4ae2-bd01-c0a4f30cb2a3" />
@@ -56,11 +52,11 @@ sudo apt install openjdk-21-jre openjdk-21-jdk -y
 </p>
 
 Thêm Jenkins Repository và Key
-*sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+**sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   [https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key](https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key)
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   [https://pkg.jenkins.io/debian-stable](https://pkg.jenkins.io/debian-stable) binary/" | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null*
+  /etc/apt/sources.list.d/jenkins.list > /dev/null**
 
 <p align="center">
  <img width="940" height="224" alt="image" src="https://github.com/user-attachments/assets/2e5ebbf6-2ab1-4666-956d-987054e022ed" />
@@ -69,37 +65,27 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 </p>
  
 Cài đặt và khởi động Jenkins
-
-sudo apt update
-
-sudo apt install jenkins -y
-
-sudo systemctl start jenkins
-
-sudo systemctl enable jenkins
-
-sudo systemctl status jenkins.
+* sudo apt update
+* sudo apt install jenkins -y
+* sudo systemctl start jenkins
+* sudo systemctl enable jenkins
+*s udo systemctl status jenkins.
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
 Cài đặt Docker
-
-sudo apt install docker.io -y
-
-sudo systemctl start docker
-
-sudo systemctl enable docker
+* sudo apt install docker.io -y
+* sudo systemctl start docker
+* sudo systemctl enable docker
 
 Thêm user vào group docker
-**sudo groupadd docker
-*sudo usermod -aG docker $USER
-*sudo usermod -aG docker jenkins
-*sudo chmod 666 /var/run/docker.sock**
+* sudo groupadd docker
+* sudo usermod -aG docker $USER
+* sudo usermod -aG docker jenkins
+* sudo chmod 666 /var/run/docker.sock
 
-Restart Jenkins để áp dụng quyền
-*sudo systemctl restart jenkins*
+Restart Jenkins để áp dụng quyền **sudo systemctl restart jenkins**
 
-Kiểm tra phân quyền
-*sudo -u jenkins docker ps*
+Kiểm tra phân quyền **sudo -u jenkins docker ps**
 
 ---
 ## Bước 4: Khởi Tạo Git & Push Code Lên GitHub   Bashgit init
