@@ -65,8 +65,8 @@ sudo -u jenkins docker ps
 
 ---
 ## Bước 4: Khởi Tạo Git & Push Code Lên GitHub   Bashgit init
-git add .
-git commit -m "Initial commit with Jenkinsfile"
-git branch -M main
-git remote add origin [https://github.com/](https://github.com/)<YOUR-USERNAME>/flask-jenkins-demo.git
-git push -u origin main
+* git add .
+* git commit -m "Initial commit with Jenkinsfile"
+* git branch -M main
+* git remote add origin [https://github.com/](https://github.com/)<YOUR-USERNAME>/flask-jenkins-demo.git
+* git push -u origin main
