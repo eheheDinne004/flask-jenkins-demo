@@ -46,20 +46,26 @@
 
 ---
 
-<details>
-<summary><b>📌 Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết</b></summary>
+> [!NOTE]
+> ### 📌 Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
+> * Thiết lập máy chủ Ubuntu trên VMware hoặc AWS EC2.
+> * Mở các cổng dịch vụ cần thiết: `8080` / `8081` (Jenkins Web UI) và `5000` (Flask Web App).
+>
+> ![Khởi tạo Security Group](fig1-aws-instance.png)  
+> *Hình 1: Khởi tạo và cấu hình Security Group / Firewall cho máy chủ.*
 
-* Thiết lập máy chủ Ubuntu trên VMware hoặc AWS EC2.
-* Mở các cổng dịch vụ cần thiết: `8080` / `8081` (Jenkins Web UI) và `5000` (Flask Web App).
-
-![Khởi tạo Security Group](fig1-aws-instance.png)  
-*Hình 1: Khởi tạo và cấu hình Security Group / Firewall cho máy chủ.*
-
-</details>
-
-<details>
-<summary><b>📌 Bước 2: Cài đặt Jenkins và Docker trên Ubuntu</b></summary>
-
-*(Nội dung bước 2)*
-
-</details>
+> [!IMPORTANT]
+> ### 📌 Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
+> 
+> **1. Cài đặt Java 21 và Jenkins**
+> ```bash
+> sudo apt update && sudo apt upgrade -y
+> sudo apt install openjdk-21-jre openjdk-21-jdk -y
+> ```
+> 
+> **2. Cài đặt Docker Engine**
+> ```bash
+> sudo apt install docker.io -y
+> sudo usermod -aG docker jenkins
+> sudo systemctl restart jenkins
+> ```
