@@ -41,7 +41,7 @@ sudo apt update && sudo apt upgrade -y
 <p align="center">
  <img width="451" height="65" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
   <br>
-  <i>Hình 1: Khởi tạo và cấu hình Inbound Rules cho máy chủ AWS EC2</i>
+  <i>Hình2: Cập nhật hệ thống</i>
 </p>
 
 * Cài đặt OpenJDK 21
