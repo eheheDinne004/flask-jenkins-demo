@@ -67,11 +67,11 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 </p>
  
 Cài đặt và khởi động Jenkins
-*sudo apt update
-sudo apt install jenkins -y
-sudo systemctl start jenkins
-sudo systemctl enable jenkins
-sudo systemctl status jenkins.*
+**sudo apt update
+*sudo apt install jenkins -y
+*sudo systemctl start jenkins
+*sudo systemctl enable jenkins
+*sudo systemctl status jenkins.**
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
 Cài đặt Docker
