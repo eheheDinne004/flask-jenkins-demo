@@ -39,7 +39,7 @@
 sudo apt update && sudo apt upgrade -y
 
 <p align="center">
- <img width="500" height="100" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
+ <img width="940" height="169" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
   <br>
   <i>Hình 3: Cập nhật hệ thống</i>
 </p>
