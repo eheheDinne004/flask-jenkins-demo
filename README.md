@@ -1,3 +1,4 @@
+<img width="449" height="200" alt="Screenshot 2026-07-20 134408" src="https://github.com/user-attachments/assets/6721f291-89d7-44c7-922b-9a41fe654737" />
 # LAB 8: TRIỂN KHAI CI/CD PIPELINE VỚI JENKINS VÀ DOCKER
 * **Người thực hiện:** Bùi Thủy Ngọc Duyên
 * **Môi trường thực thi:** Ubuntu 24.04 LTS (VMware Virtual Machine)
