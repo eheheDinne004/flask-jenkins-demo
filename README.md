@@ -52,7 +52,7 @@ Cài đặt OpenJDK 21 **sudo apt install openjdk-21-jre openjdk-21-jdk -y**
 </p>
 
 Thêm Jenkins Repository và Key
-**sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+* **sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   [https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key](https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key)
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   [https://pkg.jenkins.io/debian-stable](https://pkg.jenkins.io/debian-stable) binary/" | sudo tee \
