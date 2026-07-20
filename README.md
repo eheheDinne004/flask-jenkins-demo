@@ -37,6 +37,13 @@
 ## Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
 * Cập nhật hệ thống
 sudo apt update && sudo apt upgrade -y
+
+<p align="center">
+ <img width="451" height="65" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
+  <br>
+  <i>Hình 1: Khởi tạo và cấu hình Inbound Rules cho máy chủ AWS EC2</i>
+</p>
+
 * Cài đặt OpenJDK 21
 sudo apt install openjdk-21-jre openjdk-21-jdk -y
 * Thêm Jenkins Repository và Key
