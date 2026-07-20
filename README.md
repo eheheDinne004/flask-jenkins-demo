@@ -46,7 +46,8 @@ sudo apt update && sudo apt upgrade -y
 </p>
 
 Cài đặt OpenJDK 21
-*sudo apt install openjdk-21-jre openjdk-21-jdk -y
+
+sudo apt install openjdk-21-jre openjdk-21-jdk -y
 
 <p align="center">
  <img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/2ff3c94d-a2dd-4ae2-bd01-c0a4f30cb2a3" />
@@ -68,17 +69,25 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 </p>
  
 Cài đặt và khởi động Jenkins
-**sudo apt update
-*sudo apt install jenkins -y
-*sudo systemctl start jenkins
-*sudo systemctl enable jenkins
-*sudo systemctl status jenkins.**
+
+sudo apt update
+
+sudo apt install jenkins -y
+
+sudo systemctl start jenkins
+
+sudo systemctl enable jenkins
+
+sudo systemctl status jenkins.
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
 Cài đặt Docker
-*sudo apt install docker.io -y
+
+sudo apt install docker.io -y
+
 sudo systemctl start docker
-sudo systemctl enable docker*
+
+sudo systemctl enable docker
 
 Thêm user vào group docker
 **sudo groupadd docker
