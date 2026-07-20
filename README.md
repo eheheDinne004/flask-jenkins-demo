@@ -47,16 +47,16 @@
 ---
 ## ⚙️ 4. Các bước tiến hành chi tiết
 
-### Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
+### 📌 Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
 * Thiết lập máy chủ Ubuntu trên VMware hoặc AWS EC2.
 * Mở các cổng dịch vụ cần thiết: `8080` / `8081` (Jenkins Web UI) và `5000` (Flask Web App).
 
-![Khởi tạo và cấu hình Security Group / Firewall cho máy chủ](fig1-aws-instance.png)
+![Khởi tạo Security Group](fig1-aws-instance.png)  
 *Hình 1: Khởi tạo và cấu hình Security Group / Firewall cho máy chủ.*
 
 ---
 
-### Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
+### 📌 Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
 
 #### 1. Cài đặt Java 21 và Jenkins
 ```bash
