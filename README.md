@@ -41,17 +41,31 @@ sudo apt update && sudo apt upgrade -y
 <p align="center">
  <img width="500" height="100" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
   <br>
-  <i>Hình2: Cập nhật hệ thống</i>
+  <i>Hình 3: Cập nhật hệ thống</i>
 </p>
 
 * Cài đặt OpenJDK 21
 sudo apt install openjdk-21-jre openjdk-21-jdk -y
+
+<p align="center">
+ <img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/2ff3c94d-a2dd-4ae2-bd01-c0a4f30cb2a3" />
+  <br>
+  <i>Hình 3: Cài đặt OpenJDK 21</i>
+</p>
+
 * Thêm Jenkins Repository và Key
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   [https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key](https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key)
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   [https://pkg.jenkins.io/debian-stable](https://pkg.jenkins.io/debian-stable) binary/" | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+<p align="center">
+ <img width="940" height="224" alt="image" src="https://github.com/user-attachments/assets/2e5ebbf6-2ab1-4666-956d-987054e022ed" />
+  <br>
+  <i>Hình 4: Jenkins Repository và Key</i>
+</p>
+ 
 * Cài đặt và khởi động Jenkins
 sudo apt update
 sudo apt install jenkins -y
