@@ -32,6 +32,6 @@ Hệ thống tự động kiểm thử, đóng gói ứng dụng thành **Docker
 
 ---
 
-## 📊 Kết quả đạt được (Results)
+## Kết quả đạt được (Results)
 * Pipeline chạy thành công tất cả các giai đoạn (Stages) trên Jenkins.
 * Ứng dụng Flask truy cập thành công tại `http://localhost:5000`.
