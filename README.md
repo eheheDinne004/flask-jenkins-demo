@@ -1,37 +1,45 @@
-# Automated CI/CD Pipeline for Flask Application with Jenkins & Docker
+# LAB 8: TRIỂN KHAI CI/CD PIPELINE VỚI JENKINS VÀ DOCKER
 
-##  Tổng quan dự án (Overview)
-Dự án triển khai quy trình **Tích hợp và Triển khai Tự động (CI/CD)** cho một ứng dụng Web Python (Flask) chạy trên môi trường máy ảo **Ubuntu 24.04 (VMware)**. 
-
-Hệ thống tự động kiểm thử, đóng gói ứng dụng thành **Docker Container** và triển khai dịch vụ mỗi khi có sự thay đổi mã nguồn trên GitHub repository.
+* **Người thực hiện:** Bùi Thủy Ngọc Duyên
+* **Môi trường thực thi:** Ubuntu 24.04 LTS (VMware Virtual Machine)
+* **Trạng thái:** Completed 
 
 ---
 
-## Công nghệ sử dụng (Technologies Used)
+## 1. Mục tiêu bài thực hành
+* Cài đặt và cấu hình máy chủ **Jenkins Server** và **Docker** trên hệ điều hành Ubuntu.
+* Cấu hình phân quyền cho phép `jenkins` user tương tác trực tiếp với Docker socket không cần quyền `sudo`.
+* Xây dựng một ứng dụng Web cơ bản bằng **Python Flask Framework**.
+* Đóng gói ứng dụng thành **Docker Container** bằng `Dockerfile`.
+* Định nghĩa kịch bản **CI/CD Pipeline** tự động hóa trong `Jenkinsfile`.
+* Đồng bộ mã nguồn lên **GitHub** và khởi chạy tự động hóa Build & Deploy ứng dụng trên cổng `5000`.
+
+---
+
+## 🛠️ 2. Công nghệ & Công cụ sử dụng
 * **Hệ điều hành:** Ubuntu 24.04 LTS (VMware)
-* **CI/CD Engine:** Jenkins (Java OpenJDK 21)
+* **Runtime:** Java OpenJDK 21
+* **CI/CD Tool:** Jenkins
 * **Containerization:** Docker
 * **Source Control:** Git & GitHub
-* **Framework:** Python 3.10 (Flask)
+* **Web Framework:** Python 3.10 (Flask 3.0.2)
 
 ---
 
-##  Kiến trúc Pipeline (Jenkinsfile)
-1. **Stage 1 (Clone Code):** Tải mã nguồn mới nhất từ nhánh `main` của GitHub.
-2. **Stage 2 (Build Docker Image):** Đóng gói ứng dụng Flask thành Docker Image (`docker build`).
-3. **Stage 3 (Deploy Container):** Khởi chạy Container trên cổng `5000` (`docker run`).
+## 3. Kiến trúc Pipeline (Jenkinsfile Stages)
 
----
-
-## Cấu trúc thư mục (Directory Structure)
-* `app.py`: Mã nguồn ứng dụng Web Flask.
-* `Dockerfile`: Cấu hình đóng gói ứng dụng.
-* `Jenkinsfile`: Kịch bản thực thi CI/CD cho Jenkins.
-* `requirements.txt`: Thư viện phụ thuộc của Python.
-* `README.md`: Tài liệu hướng dẫn dự án.
-
----
-
-## Kết quả đạt được (Results)
-* Pipeline chạy thành công tất cả các giai đoạn (Stages) trên Jenkins.
-* Ứng dụng Flask truy cập thành công tại `http://localhost:5000`.
+```text
+  [ Developer Push Code ] 
+            │
+            ▼
+   [ GitHub Repository ]
+            │
+            ▼ (SCM Trigger)
+     [ Jenkins Server ]
+            │
+            ├── Stage 1: Clone Code (Kéo mã nguồn từ GitHub)
+            ├── Stage 2: Build Docker Image (docker build -t flask-app:latest .)
+            └── Stage 3: Deploy Container (docker run -d -p 5000:5000 flask-container)
+            │
+            ▼
+  [ Web Application: http://localhost:5000 ]
