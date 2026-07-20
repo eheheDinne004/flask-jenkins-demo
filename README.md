@@ -73,13 +73,14 @@ Cài đặt và khởi động Jenkins
   <br>
   <i>Hình 4: kiểm tra trạng thái Jenkins</i>
 </p>
+
 * sudo systemctl enable jenkins
 * sudo systemctl status jenkins.
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
 Cài đặt Docker
 * sudo apt install docker.io -y
-* 
+
 <p align="center">
  <img width="940" height="302" alt="image" src="https://github.com/user-attachments/assets/f0190576-2bed-47df-b493-15006a8fc97f" />
   <br>
