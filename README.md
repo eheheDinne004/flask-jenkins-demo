@@ -68,12 +68,24 @@ Cài đặt và khởi động Jenkins
 * sudo apt update
 * sudo apt install jenkins -y
 * sudo systemctl start jenkins
+<p align="center">
+ <img width="940" height="348" alt="image" src="https://github.com/user-attachments/assets/70736a5a-3631-4d12-8d1f-d27919b29b2a" />
+  <br>
+  <i>Hình 4: kiểm tra trạng thái Jenkins</i>
+</p>
 * sudo systemctl enable jenkins
-*s udo systemctl status jenkins.
+* sudo systemctl status jenkins.
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
 Cài đặt Docker
 * sudo apt install docker.io -y
+* 
+<p align="center">
+ <img width="940" height="302" alt="image" src="https://github.com/user-attachments/assets/f0190576-2bed-47df-b493-15006a8fc97f" />
+  <br>
+  <i>Hình 5: Cài đặt Docker </i>
+</p> 
+
 * sudo systemctl start docker
 * sudo systemctl enable docker
 
@@ -82,6 +94,11 @@ Thêm user vào group docker
 * sudo usermod -aG docker $USER
 * sudo usermod -aG docker jenkins
 * sudo chmod 666 /var/run/docker.sock
+<p align="center">
+<img width="940" height="81" alt="image" src="https://github.com/user-attachments/assets/9679d119-8fb4-4bf8-9bba-4532d34bfe8f" />
+  <br>
+  <i>Hình 6: Thêm user và phân quyền </i>
+</p> 
 
 Restart Jenkins để áp dụng quyền **sudo systemctl restart jenkins**
 
