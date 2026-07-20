@@ -28,8 +28,6 @@
 *Hình 1: Khởi tạo và cấu hình Security Group / Firewall cho máy chủ.*
 ---
 ### Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
-#### 1. Cài đặt Java 21 và Jenkins
-```bash
 # Cập nhật hệ thống
 sudo apt update && sudo apt upgrade -y
 # Cài đặt OpenJDK 21
@@ -46,4 +44,21 @@ sudo apt install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 sudo systemctl status jenkins.
----
+
+### bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
+# Cài đặt Docker
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Thêm user vào group docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo usermod -aG docker jenkins
+sudo chmod 666 /var/run/docker.sock
+
+# Restart Jenkins để áp dụng quyền
+sudo systemctl restart jenkins
+
+# Kiểm tra phân quyền
+sudo -u jenkins docker ps
