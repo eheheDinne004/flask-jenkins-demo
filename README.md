@@ -35,5 +35,7 @@
             │
             ▼
   [ Web Application: http://localhost:5000 ]
+---
+## 🛠️ 2. Công nghệ & Công cụ sử dụng
 
 
