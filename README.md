@@ -43,6 +43,9 @@
             │
             ▼
   [ Web Application: http://localhost:5000 ]
+
+---
+
 ### Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
 * Thiết lập máy chủ Ubuntu trên VMware hoặc AWS EC2.
 * Mở các cổng dịch vụ cần thiết: `8080` / `8081` (Jenkins Web UI) và `5000` (Flask Web App).
