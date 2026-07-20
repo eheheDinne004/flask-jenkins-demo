@@ -19,24 +19,6 @@
 * **Source Control:** Git & GitHub
 * **Web Framework:** Python 3.10 (Flask 3.0.2)
 ---
-## 3. Kiến trúc Pipeline (Jenkinsfile Stages)
-```text
-  [ Developer Push Code ]
-            │
-            ▼
-   [ GitHub Repository ]
-            │
-            ▼ (SCM Trigger)
-     [ Jenkins Server ]
-            │
-            ├── Stage 1: Clone Code (Kéo mã nguồn từ GitHub)
-            ├── Stage 2: Build Docker Image (docker build -t flask-app:latest .)
-            └── Stage 3: Deploy Container (docker run -d -p 5000:5000 flask-container)
-            │
-            ▼
-  [ Web Application: http://localhost:5000 ]
----
-
 ### ⚙️ 4. Các bước tiến hành chi tiết
 ---
 ### 📌 Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
@@ -64,4 +46,22 @@ sudo apt install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
-viết lại nguyên file để tôi đưa vào github
+---
+## 3. Kiến trúc Pipeline (Jenkinsfile Stages)
+```text
+  [ Developer Push Code ]
+            │
+            ▼
+   [ GitHub Repository ]
+            │
+            ▼ (SCM Trigger)
+     [ Jenkins Server ]
+            │
+            ├── Stage 1: Clone Code (Kéo mã nguồn từ GitHub)
+            ├── Stage 2: Build Docker Image (docker build -t flask-app:latest .)
+            └── Stage 3: Deploy Container (docker run -d -p 5000:5000 flask-container)
+            │
+            ▼
+  [ Web Application: http://localhost:5000 ]
+
+
