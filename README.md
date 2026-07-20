@@ -45,6 +45,7 @@
   [ Web Application: http://localhost:5000 ]
 
 ---
+## ⚙️ 4. Các bước tiến hành chi tiết
 
 ### Bước 1: Khởi tạo Máy chủ & Mở Cổng Cần Thiết
 * Thiết lập máy chủ Ubuntu trên VMware hoặc AWS EC2.
