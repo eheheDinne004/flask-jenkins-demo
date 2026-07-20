@@ -28,17 +28,17 @@
 *Hình 1: Khởi tạo và cấu hình Security Group / Firewall cho máy chủ.*
 ---
 ## Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
-# Cập nhật hệ thống
+* Cập nhật hệ thống
 sudo apt update && sudo apt upgrade -y
-# Cài đặt OpenJDK 21
+* Cài đặt OpenJDK 21
 sudo apt install openjdk-21-jre openjdk-21-jdk -y
-# Thêm Jenkins Repository và Key
+* Thêm Jenkins Repository và Key
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   [https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key](https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key)
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   [https://pkg.jenkins.io/debian-stable](https://pkg.jenkins.io/debian-stable) binary/" | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-# Cài đặt và khởi động Jenkins
+* Cài đặt và khởi động Jenkins
 sudo apt update
 sudo apt install jenkins -y
 sudo systemctl start jenkins
@@ -46,21 +46,21 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins.
 
 ## Bước 3: Cài đặt Docker & Phân quyền cho Jenkins Java 21 và Jenkins
-# Cài đặt Docker
+* Cài đặt Docker
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 
-# Thêm user vào group docker
+* Thêm user vào group docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo usermod -aG docker jenkins
 sudo chmod 666 /var/run/docker.sock
 
-# Restart Jenkins để áp dụng quyền
+* Restart Jenkins để áp dụng quyền
 sudo systemctl restart jenkins
 
-# Kiểm tra phân quyền
+* Kiểm tra phân quyền
 sudo -u jenkins docker ps
 
 ---
