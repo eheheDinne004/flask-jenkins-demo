@@ -36,7 +36,7 @@
 
 ## Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
 Cập nhật hệ thống
-*sudo apt update && sudo apt upgrade -y*
+*sudo apt update && sudo apt upgrade -y
 
 <p align="center">
  <img width="940" height="169" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
@@ -45,7 +45,7 @@ Cập nhật hệ thống
 </p>
 
 Cài đặt OpenJDK 21
-*sudo apt install openjdk-21-jre openjdk-21-jdk -y*
+*sudo apt install openjdk-21-jre openjdk-21-jdk -y
 
 <p align="center">
  <img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/2ff3c94d-a2dd-4ae2-bd01-c0a4f30cb2a3" />
