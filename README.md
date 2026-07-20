@@ -36,7 +36,8 @@
 
 ## Bước 2: Cài đặt Jenkins và Docker trên Ubuntu
 Cập nhật hệ thống
-*sudo apt update && sudo apt upgrade -y
+
+sudo apt update && sudo apt upgrade -y
 
 <p align="center">
  <img width="940" height="169" alt="cập nhập hệ thống" src="https://github.com/user-attachments/assets/b026d370-a048-4e96-b8f3-43606930b00d" />
