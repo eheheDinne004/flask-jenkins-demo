@@ -19,8 +19,6 @@
 * **Source Control:** Git & GitHub
 * **Web Framework:** Python 3.10 (Flask 3.0.2)
 ---
-## 🛠️ 2. Công nghệ & Công cụ sử dụng
----
 ## 3. Kiến trúc Pipeline (Jenkinsfile Stages)
 ```text
   [ Developer Push Code ]
@@ -37,4 +35,6 @@
             │
             ▼
   [ Web Application: http://localhost:5000 ]
-
+---
+## 🛠️ 2. Công nghệ & Công cụ sử dụng
+---
