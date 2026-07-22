@@ -11,7 +11,7 @@
 * Định nghĩa kịch bản CI/CD Pipeline tự động hóa trong `Jenkinsfile`.
 * Đồng bộ mã nguồn lên GitHub và khởi chạy tự động hóa Build & Deploy ứng dụng trên cổng `5000`.
 ---
-## 🛠️ 2. Công nghệ & Công cụ sử dụng
+##  2. Công nghệ & Công cụ sử dụng
 * Hệ điều hành: Ubuntu 24.04 LTS (VMware)
 * Runtime:Java OpenJDK 21
 * CI/CD Tool: Jenkins
@@ -19,7 +19,7 @@
 * Source Control: Git & GitHub
 * Web Framework: Python 3.10 (Flask 3.0.2)
 ---
-## ⚙️ 3. Các bước tiến hành chi tiết
+##  3. Các bước tiến hành chi tiết
 ### Bước 1: Khởi Tạo Máy Chủ & Mở Cổng Cần Thiết
 
 1. Khởi tạo máy chủ Ubuntu 24.04 trên hạ tầng AWS EC2 (hoặc VMware).
