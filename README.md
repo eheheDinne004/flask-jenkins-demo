@@ -1,7 +1,5 @@
 
 # LAB 8: TRIỂN KHAI CI/CD PIPELINE VỚI JENKINS VÀ DOCKER
-* Người thực hiện: Bùi Thủy Ngọc Duyên
-* Môi trường thực thi: Ubuntu 24.04 LTS (VMware Virtual Machine)
 ---
 ## 1. Mục tiêu bài thực hành
 * Cài đặt và cấu hình máy chủ Jenkins Server và Docker trên hệ điều hành Ubuntu.
